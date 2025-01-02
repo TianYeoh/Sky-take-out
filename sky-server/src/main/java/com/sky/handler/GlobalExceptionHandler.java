@@ -20,6 +20,7 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler
     public Result exceptionHandler(BaseException ex){
+        // 捕获父类的一场
         log.error("异常信息：{}", ex.getMessage());
         return Result.error(ex.getMessage());
     }
