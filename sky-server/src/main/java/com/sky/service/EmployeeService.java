@@ -13,7 +13,7 @@ public interface EmployeeService {
      */
     Employee login(EmployeeLoginDTO employeeLoginDTO);
     /**
-     * 员工登录
+     * 新增员工
      * @param employeeDTO
      */
     void save(EmployeeDTO employeeDTO);

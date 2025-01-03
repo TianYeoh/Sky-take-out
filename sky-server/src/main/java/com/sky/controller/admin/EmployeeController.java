@@ -44,6 +44,7 @@ public class EmployeeController {
     @PostMapping("/login")
     @ApiOperation(value = "员工登录功能")
     public Result<EmployeeLoginVO> login(@RequestBody EmployeeLoginDTO employeeLoginDTO) {
+        // System.out.println("当前线程的id:"+Thread.currentThread().getId());
         log.info("员工登录：{}", employeeLoginDTO);
 
         Employee employee = employeeService.login(employeeLoginDTO);
@@ -80,7 +81,7 @@ public class EmployeeController {
 
     @PostMapping
     @ApiOperation(value = "新增员工")
-    public Result save(@RequestBody EmployeeDTO employeeDTO){
+    public Result<String> save(@RequestBody EmployeeDTO employeeDTO){
         // 提交的是json格式的数据 所以需要加一个@RequestBody
         log.info("新增员工{}",employeeDTO);
         employeeService.save(employeeDTO);
