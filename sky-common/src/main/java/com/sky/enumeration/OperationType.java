@@ -1,6 +1,7 @@
 package com.sky.enumeration;
 
 /**
+ * 枚举
  * 数据库操作类型
  */
 public enum OperationType {
